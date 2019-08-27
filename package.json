@@ -1,0 +1,30 @@
+{
+    "name": "ping-pong-build-trigger-task",
+    "version": "1.0.0",
+    "description": "Randomly trigger builds to find a sequenced build order",
+    "main": "ping-pong-build-trigger.ps1",
+    "scripts": {
+        "test": "-mode AzureDevOps -apiKey cqjk3s2pkv5x5o57feaw6j2qs4id2thfsw3w544hiqgt347gfoja -source http://pg.azuredevops.local/DefaultCollection/PaymentGateway -projectName PaymentGateway -sourceBranch develop"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/brunomartinspro/Ping-Pong-Build-Trigger.git"
+    },
+    "keywords": [
+        "build",
+        "trigger",
+        "ping",
+        "pong",
+        "task"
+    ],
+    "author": "Bruno Martins (brunomartins.pro)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/brunomartinspro/Ping-Pong-Build-Trigger/issues"
+    },
+    "homepage": "https://github.com/brunomartinspro/Ping-Pong-Build-Trigger#readme",
+    "devDependencies": {
+        "@types/node": "^12.7.2",
+        "@types/q": "^1.5.2"
+    }
+}

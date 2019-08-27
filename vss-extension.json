@@ -1,0 +1,37 @@
+{
+    "manifestVersion": 1,
+    "id": "ping-pong-build-trigger-task",
+    "name": "Ping Pong Build Trigger",
+    "version": "1.0.0",
+    "publisher": "BrunoMartinsPro",
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "description": "Randomly trigger builds to find a sequenced build order",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [{
+        "path": ""
+    }],
+    "contributions": [{
+        "id": "custom-build-release-task",
+        "type": "ms.vss-distributed-task.task",
+        "targets": [
+            "ms.vss-distributed-task.tasks"
+        ],
+        "properties": {
+            "mode": "AzureDevOps",
+            "apiKey": "MySuperSecretKey",
+            "source": "http://kamina.azuredevops.local/DefaultCollection/Kamina",
+            "projectName": "Tengen Toppa Gurren Lagann",
+            "sourceBranch": "develop",
+            "lastKnownFile": "$(Build.SourcesDirectory)/DevOps/BuildOrder.json",
+            "maxErrorCycles": 10,
+            "infiniteCycles": false
+        }
+    }]
+}
