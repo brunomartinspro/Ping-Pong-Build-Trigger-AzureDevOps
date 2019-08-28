@@ -1,1 +1,0 @@
-# Ping-Pong-Build-Trigger-AzureDevOps
