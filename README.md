@@ -17,3 +17,5 @@ steps:
     maxErrorCycles: 6
     infiniteCycles: 'false'
 ```
+
+![alt text](Extension/extensionIcon.png)
