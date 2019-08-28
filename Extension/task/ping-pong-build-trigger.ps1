@@ -9,7 +9,7 @@ Param(
     [Parameter(Mandatory = $false)]
     [int]$maxErrorCycles,
     [Parameter(Mandatory = $false)]
-    [bool]$infiniteCycles
+    [string]$infiniteCycles
 )
 
 $version = "v1.0.0"
@@ -94,12 +94,16 @@ if ($maxErrorCycles) {
 }
 
 if ($infiniteCycles) {
-    $params = $params + " --infinite-cycles $infiniteCycles"
+
+    if("$infiniteCycles" -eq "true" -Or  "$infiniteCycles" -eq "1")
+    {
+        $params = $params + " --infinite-cycles $True"
+    }
+
 }
 
 $params.Split(" ")
 
 Start-Process -NoNewWindow -FilePath "$releaseLocation\PingPongBuildTrigger.exe" -ArgumentList "$params"
-
 
 cd $currentLocation

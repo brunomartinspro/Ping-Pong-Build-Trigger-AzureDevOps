@@ -12,26 +12,19 @@
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "images/extension-icon.png"
+        "default": "extensionIcon.png"
     },
     "files": [{
-        "path": ""
+        "path": "task"
     }],
     "contributions": [{
-        "id": "custom-build-release-task",
+        "id": "ping-pong-build-trigger",
         "type": "ms.vss-distributed-task.task",
         "targets": [
             "ms.vss-distributed-task.tasks"
         ],
         "properties": {
-            "mode": "AzureDevOps",
-            "apiKey": "MySuperSecretKey",
-            "source": "http://kamina.azuredevops.local/DefaultCollection/Kamina",
-            "projectName": "Tengen Toppa Gurren Lagann",
-            "sourceBranch": "develop",
-            "lastKnownFile": "$(Build.SourcesDirectory)/DevOps/BuildOrder.json",
-            "maxErrorCycles": 10,
-            "infiniteCycles": false
+            "name": "task"
         }
     }]
 }

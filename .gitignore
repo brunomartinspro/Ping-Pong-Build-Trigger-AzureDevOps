@@ -5,3 +5,5 @@
 /.vs
 /node_modules/@types
 /PingPongBuildTrigger
+/Extension/node_modules/@types
+*.vsix
