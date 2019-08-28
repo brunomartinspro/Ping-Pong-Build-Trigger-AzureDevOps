@@ -3,9 +3,7 @@ Extension for Azure DevOps
 
 Find the main source code in https://github.com/brunomartinspro/Ping-Pong-Build-Trigger
 
-Yaml Example
-
-# Ping-Pong-Build-Trigger-AzureDevOps
+# Yaml Example
 steps:
 - task: ping-pong-build-trigger@1
   inputs:
