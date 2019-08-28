@@ -104,11 +104,7 @@ if ($infiniteCycles) {
 
 $params.Split(" ")
 
-$process = Start-Process -NoNewWindow -FilePath "$releaseLocation\PingPongBuildTrigger.exe" -ArgumentList "$params"
-          
-while (!($process))
-{
-  start-sleep -s 5
-}
+Start-Process -NoNewWindow -PassThru -Wait -FilePath "$releaseLocation\PingPongBuildTrigger.exe" -ArgumentList "$params" 
+
 
 cd $currentLocation
