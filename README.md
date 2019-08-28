@@ -4,6 +4,7 @@ Extension for Azure DevOps
 Find the main source code in https://github.com/brunomartinspro/Ping-Pong-Build-Trigger
 
 # Yaml Example
+```
 steps:
 - task: ping-pong-build-trigger@1
   inputs:
@@ -15,3 +16,4 @@ steps:
     lastKnownFile: ''
     maxErrorCycles: 6
     infiniteCycles: 'false'
+```
