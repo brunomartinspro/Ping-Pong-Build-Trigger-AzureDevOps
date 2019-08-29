@@ -14,9 +14,20 @@
     "icons": {
         "default": "extensionIcon.png"
     },
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE.md"
+        }
+    },
     "files": [{
         "path": "task"
     }],
+    "galleryFlags": [
+        "Public"
+    ],
     "contributions": [{
         "id": "ping-pong-build-trigger",
         "type": "ms.vss-distributed-task.task",
