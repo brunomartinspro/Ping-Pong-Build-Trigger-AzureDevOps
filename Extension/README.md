@@ -5,6 +5,12 @@ Randomly trigger builds to find a sequenced build order
 - Find the main source code in https://github.com/brunomartinspro/Ping-Pong-Build-Trigger
 - Find the extension source code in https://github.com/brunomartinspro/Ping-Pong-Build-Trigger-AzureDevOps
 
+## Features
+- Parallel Builds
+- Sequence Builds
+- Output Sequence
+- Ignores DevOps builds
+
 # Yaml Example
 ```
 steps:
