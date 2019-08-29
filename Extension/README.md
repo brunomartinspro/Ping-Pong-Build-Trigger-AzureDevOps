@@ -63,5 +63,3 @@ Having separate repositories that have an order that needs to be built with an e
 9. E
 
 The next time the program runs it will use this sequence and run the builds sequentially but if there are new builds after ending the sequence it will run in parallel the new builds and generate a new sequence.
-
-![alt text](Extension/extensionIcon.png)
