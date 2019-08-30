@@ -20,12 +20,6 @@ $releaseLocation = "$currentLocation\PingPongBuildTrigger"
 
 Write-Host("`r`n")
 
-$currentMaxTls = [Math]::Max([Net.ServicePointManager]::SecurityProtocol.value__,[Net.SecurityProtocolType]::Tls.value__)
-$newTlsTypes = [enum]::GetValues('Net.SecurityProtocolType') | Where-Object { $_ -gt $currentMaxTls }
-$newTlsTypes | ForEach-Object {
-    [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor $_
-}
-
 if((Test-Path -Path $releaseLocation) -eq $False)
 {
 	Write-Host("Creating directory in $currentLocation")
@@ -41,7 +35,7 @@ cd $releaseLocation
 if((Test-Path -Path "$releaseLocation\Ping-Pong-Build-Trigger-$version.zip") -eq $False)
 {
 	Write-Host("Downloading Release $version...")
-
+    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
 	Invoke-WebRequest "https://github.com/brunomartinspro/Ping-Pong-Build-Trigger/releases/download/$version/Ping-Pong-Build-Trigger-$version.zip" -OutFile "$releaseLocation\Ping-Pong-Build-Trigger-$version.zip"
 }
 else
