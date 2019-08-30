@@ -20,6 +20,12 @@ $releaseLocation = "$currentLocation\PingPongBuildTrigger"
 
 Write-Host("`r`n")
 
+$currentMaxTls = [Math]::Max([Net.ServicePointManager]::SecurityProtocol.value__,[Net.SecurityProtocolType]::Tls.value__)
+$newTlsTypes = [enum]::GetValues('Net.SecurityProtocolType') | Where-Object { $_ -gt $currentMaxTls }
+$newTlsTypes | ForEach-Object {
+    [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor $_
+}
+
 if((Test-Path -Path $releaseLocation) -eq $False)
 {
 	Write-Host("Creating directory in $currentLocation")

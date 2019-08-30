@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "ping-pong-build-trigger-task",
     "name": "Ping Pong Build Trigger",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "BrunoMartinsPro",
     "targets": [{
         "id": "Microsoft.VisualStudio.Services"
