@@ -1,6 +1,6 @@
 {
     "name": "ping-pong-build-trigger-task",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "description": "Randomly trigger builds to find a sequenced build order",
     "main": "ping-pong-build-trigger.ps1",
     "scripts": {
