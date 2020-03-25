@@ -4,7 +4,6 @@
     "description": "Randomly trigger builds to find a sequenced build order",
     "main": "ping-pong-build-trigger.ps1",
     "scripts": {
-        "test": "-mode AzureDevOps -apiKey cqjk3s2pkv5x5o57feaw6j2qs4id2thfsw3w544hiqgt347gfoja -source http://pg.azuredevops.local/DefaultCollection/PaymentGateway -projectName PaymentGateway -sourceBranch develop"
     },
     "repository": {
         "type": "git",
